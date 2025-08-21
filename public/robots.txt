@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://company-wise-leetcode.vercel.app/sitemap.xml
+
+# Disallow admin and private paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow specific API endpoints if needed
+Allow: /api/companies
+Allow: /api/problems

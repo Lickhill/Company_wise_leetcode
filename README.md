@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Company-wise LeetCode Problems
 
-## Getting Started
+A Next.js application that organizes LeetCode problems by company, helping developers prepare for technical interviews at top tech companies.
 
-First, run the development server:
+## 🚀 Features
 
+- **Company-based Organization**: Browse problems by Google, Amazon, Microsoft, Facebook, and more
+- **Real Data**: Fetches actual interview frequency data from reliable sources
+- **Dynamic Company Logos**: Auto-generates logos for companies without predefined ones
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
+- **Fast Search**: Quickly find companies and problems
+- **Direct LeetCode Links**: Click to solve problems directly on LeetCode
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.4.7 with React 19
+- **Styling**: Tailwind CSS v4
+- **TypeScript**: Full type safety
+- **Deployment**: Vercel (optimized)
+- **Analytics**: Vercel Analytics & Speed Insights
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Lickhill/Company_wise_leetcode.git
+cd Company_wise_leetcode
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## 🚀 Deployment to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+### Option 1: Deploy with Vercel CLI
+```bash
+# Install Vercel CLI (if not already installed)
+npm install -g vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Deploy
+vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Follow the prompts to configure your project
+```
 
-## Deploy on Vercel
+### Option 2: Deploy via GitHub Integration
+1. Push your code to GitHub
+2. Visit [vercel.com](https://vercel.com)
+3. Connect your GitHub repository
+4. Vercel will automatically detect Next.js and deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Environment Variables
+No environment variables are required for basic functionality. Optional variables can be set in Vercel dashboard:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `NEXT_PUBLIC_APP_URL`: Your deployment URL
+- `NEXT_PUBLIC_ENABLE_ANALYTICS`: Enable Vercel Analytics
+- `NEXT_PUBLIC_ENABLE_SPEED_INSIGHTS`: Enable Speed Insights
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout with metadata
+│   ├── page.tsx            # Main application page
+│   ├── sitemap.ts          # SEO sitemap generator
+│   └── globals.css         # Global styles
+├── components/
+│   ├── CompanyCard.tsx     # Company display component
+│   └── ProblemList.tsx     # Problem list component
+├── services/
+│   └── dataService.ts      # Data fetching and processing
+└── types/
+    └── index.ts            # TypeScript type definitions
+```
+
+## 🎯 Key Features for Production
+
+- **SEO Optimized**: Comprehensive metadata, sitemap, robots.txt
+- **Performance**: Vercel Analytics and Speed Insights integration
+- **Security**: Security headers configured in vercel.json
+- **Caching**: Optimized image loading with Next.js Image component
+- **Error Handling**: Graceful fallbacks for API failures
+- **Type Safety**: Full TypeScript coverage
+
+## 📊 Data Sources
+
+- **Primary**: Real company interview data from GitHub repositories
+- **Company Logos**: Official company websites and CDNs
+- **Fallback**: Auto-generated SVG logos for consistency
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🔗 Links
+
+- **Live Demo**: [https://company-wise-leetcode.vercel.app](https://company-wise-leetcode.vercel.app)
+- **Repository**: [https://github.com/Lickhill/Company_wise_leetcode](https://github.com/Lickhill/Company_wise_leetcode)
+- **LeetCode**: [https://leetcode.com](https://leetcode.com)
+
+## 🐛 Issues & Support
+
+If you encounter any issues or have questions, please [open an issue](https://github.com/Lickhill/Company_wise_leetcode/issues) on GitHub.
+
+---
+
+**Happy Coding!** 🎉 Good luck with your technical interviews!
