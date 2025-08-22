@@ -87,12 +87,10 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<Script
-					id="adsense-script"
 					async
 					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5475289645274873"
 					crossOrigin="anonymous"
-					strategy="afterInteractive"
-				/>
+				></Script>
 				{children}
 				<Analytics />
 				<SpeedInsights />
